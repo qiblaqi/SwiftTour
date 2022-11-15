@@ -69,3 +69,20 @@ if nameConst == "Nick" && ageConst == 30 {
 }
 
 var something = String(age)
+
+var movies:[Any] = ["toy story", "cars",
+                        "finding nemo", 3]
+var books = ["sherock", "1984"] as [String]
+movies[1]
+movies.append("finding dory")
+movies.append(1)
+movies.insert("toy story 2", at: movies.endIndex)
+
+let moviesII: [String] = ["This is it","Toy Story 3"]
+//moviesII.append("oh new movies")
+//constant array cant be appended new item
+//its fixed
+
+for _ in 1...100 {
+    print(1)
+}
