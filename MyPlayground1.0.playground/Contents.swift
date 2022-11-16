@@ -163,3 +163,35 @@ func myTextPrinter(number : Int, text : String) {
 
 myTextPrinter(number: 6, text: "oh lala")
 myTextPrinter(number: -2, text: "ohno wrong input bad :( ")
+
+// Optionals
+// its an object or nothing!
+
+var age2: Int? = 26
+// var age2: Int = nil "this is causing error"
+
+var name2: String? = "qibla"
+print(age2)
+print(age2!)
+//print(Int(name2))
+
+//Unwrap the Optionals
+
+if let age3 = Int("2134") {
+    print(age3)
+}
+
+let someNil: Int? = nil
+var someNil2: Int? = nil
+
+// Unwrap the Optional parameter and print "it is nil" or print "it is the \(type)"
+func myUnwrapper(param: String?) {
+    if let theString = param {
+        print("\(theString) and the type is \(type(of: theString))")
+    }else {
+        print("it is nil! ")
+    }
+}
+
+myUnwrapper(param: "123")
+myUnwrapper(param: name2)
