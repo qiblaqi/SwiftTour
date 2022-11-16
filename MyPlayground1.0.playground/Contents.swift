@@ -129,3 +129,37 @@ qiblaCodes["a"] = ""
 qiblaCodes
 qiblaCodes.removeValue(forKey: "a")
 qiblaCodes
+
+// Functions
+func sayHelloToPerson(name: String) {
+    print("Hello my friend \(name) :)")
+}
+
+sayHelloToPerson(name: "okidoki")
+
+for _ in 1...3 {
+    sayHelloToPerson(name: "q1bla" )
+}
+
+// Multiple param
+func addTwoNumbers(number1: Int, number2: Int) -> Int {
+        return number1+number2
+}
+
+var c = addTwoNumbers(number1: 23, number2: 45)
+var d = addTwoNumbers(number1: c, number2: 9)
+// Nested function call addTwoNumbers(number1: addTwoNumbers(...), number2:...)
+
+// func takes Int number and a String text. Print the text nubmer times.
+func myTextPrinter(number : Int, text : String) {
+    if number > 0 {
+        for _ in 1...number {
+            print(text)
+        }
+    }else {
+        print("your number is too small")
+    }
+}
+
+myTextPrinter(number: 6, text: "oh lala")
+myTextPrinter(number: -2, text: "ohno wrong input bad :( ")
