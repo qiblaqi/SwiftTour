@@ -224,3 +224,33 @@ cat2.age = 12
 cat2.name = "oldie"
 cat2.furColor = "brown"
 cat2.meow()
+
+
+// Structs
+
+// Similar to Classes but different
+
+struct Dog {
+    //attributes
+    var name = ""
+    var age = 0
+    var furColor = ""
+    
+    func bark() {
+        print("\(name): wof wof \(age) wof wof \(furColor)")
+    }
+}
+
+var myDog = Dog(name: "Huff", age: 9, furColor: "brown")
+myDog.bark()
+
+//var badDog = Dog() error! missing arguments!
+var dog2 = Dog()
+dog2.age = 1
+
+let dog3 = Dog()
+//dog3.age = 2 error! dog3 is a constant and not mutable
+
+let cat3 = Cat()
+cat3.age = 3
+print(cat3.age)
