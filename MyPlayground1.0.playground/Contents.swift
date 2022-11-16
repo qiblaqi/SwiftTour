@@ -108,4 +108,24 @@ for number2 in numbers2 {
 }
 print(count)
 
+//Set
 var luckNumbers: Set = [1,2,3,45,6]
+var favoriteFood: Set<String> = ["xian food","nyc food","shanghai food"]
+luckNumbers is Set<String>
+luckNumbers.insert(2)
+let someInt = 42
+luckNumbers.hashValue
+var dictSetSet: [Set : Set] = [luckNumbers:favoriteFood,]
+dictSetSet
+var myCharacter = "c"
+type(of: myCharacter)
+
+//Dictionary
+//
+var qiblaCodes = ["":""]
+qiblaCodes[""]
+qiblaCodes[""] = "Nice"
+qiblaCodes["a"] = ""
+qiblaCodes
+qiblaCodes.removeValue(forKey: "a")
+qiblaCodes
