@@ -222,7 +222,7 @@ myCat.furColor
 var cat2 = Cat()
 cat2.age
 
-cat2.age = 12
+cat2.age = .a2
 cat2.name = "oldie"
 cat2.furColor = "brown"
 cat2.meow()
@@ -254,7 +254,7 @@ let dog3 = Dog()
 //dog3.age = 2 error! dog3 is a constant and not mutable
 
 let cat3 = Cat()
-cat3.age = 3
+cat3.age = .a3
 print(cat3.age)
 
 
@@ -265,6 +265,40 @@ enum Compass {
     case south
     case east
     case west
+    case nowhere
 }
 
-var myDirection : Compass = .south
+var myDirection : Compass = .nowhere
+
+
+// Switches
+
+var age3 = 26
+
+switch age3 {
+    
+case 0...12:
+    print("young child")
+case 13...18:
+    print("teen")
+case 19...105:
+    print("probably adult")
+case 106...300:
+    print("elf")
+default:
+    print("adult maybe")
+}
+
+// Switches with Enums
+switch myDirection {
+case .north:
+    print("turn right")
+case .south:
+    print("turn left")
+case .east:
+    print("go straight")
+case .west:
+    print("go behind")
+default:
+    print("stay where you are")
+}
