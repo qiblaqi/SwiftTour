@@ -197,11 +197,14 @@ myUnwrapper(param: "123")
 myUnwrapper(param: name2)
 
 // Classes
+enum AgeOfCat: Int {
+    case a1 = 1, a2 = 2, a3 = 3, a4 = 4, a5 = 5
+}
 
 class Cat {
     //attributes
     var name = ""
-    var age = 0
+    var age : AgeOfCat = .a1
     var furColor = ""
     
     func meow() {
@@ -210,8 +213,7 @@ class Cat {
 }
 
 var myCat = Cat()
-myCat.age
-myCat.age = 1
+myCat.age = .a3
 myCat.name = "kito"
 myCat.furColor = "yellow"
 myCat.meow()
@@ -254,3 +256,15 @@ let dog3 = Dog()
 let cat3 = Cat()
 cat3.age = 3
 print(cat3.age)
+
+
+// Enums
+
+enum Compass {
+    case north
+    case south
+    case east
+    case west
+}
+
+var myDirection : Compass = .south
