@@ -195,3 +195,32 @@ func myUnwrapper(param: String?) {
 
 myUnwrapper(param: "123")
 myUnwrapper(param: name2)
+
+// Classes
+
+class Cat {
+    //attributes
+    var name = ""
+    var age = 0
+    var furColor = ""
+    
+    func meow() {
+        print("\(name): meow meow \(age) meow meow \(furColor)")
+    }
+}
+
+var myCat = Cat()
+myCat.age
+myCat.age = 1
+myCat.name = "kito"
+myCat.furColor = "yellow"
+myCat.meow()
+myCat.furColor
+
+var cat2 = Cat()
+cat2.age
+
+cat2.age = 12
+cat2.name = "oldie"
+cat2.furColor = "brown"
+cat2.meow()
