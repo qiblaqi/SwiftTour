@@ -7,6 +7,7 @@
 //qizhao edited 11-11-2022
 
 import Foundation
+import SQLite3
 
 var myName: String = "Qi Zhao"
 var age = 26
@@ -302,3 +303,49 @@ case .west:
 default:
     print("stay where you are")
 }
+
+
+// example
+//let alphabets = "abcdefghijklmnopqrstuvwxyz"
+//let c1 = ","
+//if let
+
+struct wordQi{
+    var name: String
+    var age: Int
+    var sex: Character
+}
+
+let newWord = wordQi(name: "qi", age: 26, sex: "m")
+let newWord2 = wordQi(name: "bill", age: 26, sex: "m")
+
+func wordScanner(texts: String) {
+    let alphabets = "abcdefghijklmnopqrstuvwxyz "
+    var newTexts = ""
+    var count: [String:Int] = [:]
+    for char in texts {
+        var lowCaseChar: Character = Character(char.lowercased())
+        if let identifier = alphabets.firstIndex(of: lowCaseChar) {
+            newTexts.append(char)
+        }
+
+    }
+    for word in newTexts.split(by: " ") {
+        if let oldValue = count.updateValue(1, forKey: String(word)) {
+            count.updateValue(oldValue+1, forKey:String(word))
+        }
+    }
+    var top3: [(String, Int)]  = [(String(),Int())]
+    for (key,value) in count {
+        for index in 0...top3.count {
+            if value > top3[index].1 {
+                top3.insert((key, value), at: index)
+            }
+        }
+    }
+//    print(count)
+    print(top3)
+    
+}
+wordScanner(texts: "abc? def! hij, opq: rst.")
+wordScanner(texts: "aaa bbb ccc aaa, ddd eee ccc, ccc ccc.")
